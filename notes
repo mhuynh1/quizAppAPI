@@ -1,0 +1,32 @@
+new folder
+new server.js file
+npm init in the root folder //initialize package.json
+npm i -s express body-parser
+
+in server.js - - create server
+const express = require('express')
+const app = express()
+const bodyParser = require('body-parser')
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded())
+/// configure CORS here ///
+app.use( (req,res)=>{
+    res.send('hi')
+})
+
+app.listen(8080, ()=>{
+   console.log('api server is running on 8080')
+})
+
+server is in separate folder and it can be imported into any existing project of a separate folder
+
+allow CORS bc api call is diff url from where the page originated from
+
+if asked are you familiar with microservices, 
+respond with our app's node server was separate from web server as well as ws.
+reason we did it was for scalability
+
+
+bring in mongo
+in api folder npm i -s mongodb
+create monogodb.js and add in configs
