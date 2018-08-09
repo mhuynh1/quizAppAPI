@@ -31,6 +31,12 @@ const readById = id => {
             return result
         })
         .next()
+        // .then(res => {
+        //     return res
+        // })
+        // .catch(err =>{
+        //     return err
+        // })
 }
 
 const _delete = id => {
