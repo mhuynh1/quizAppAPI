@@ -31,12 +31,6 @@ const readById = id => {
             return result
         })
         .next()
-    // .then(res => {
-    //     return res
-    // })
-    // .catch(err =>{
-    //     return err
-    // })
 }
 
 const _delete = id => {
@@ -64,72 +58,3 @@ module.exports = {
     , _delete
     , updateById
 }
-
-
-
-const users = [
-    {
-        firstName: "Mike",
-        lastName: "Wazowski",
-        isBoardMember: true,
-        isItAdmin: true,
-        isProjectManager: true,
-        year: 1
-    },
-    {
-        firstName: "Sully",
-        lastName: "Sullivan",
-        isBoardMember: false,
-        isItAdmin: false,
-        isProjectManager: false,
-        year: 4
-    },
-    {
-        firstName: "Roz",
-        lastName: "Peterson",
-        isBoardMember: true,
-        isItAdmin: false,
-        isProjectManager: false,
-        year: 1
-    },
-    {
-        firstName: "Simba",
-        lastName: "Lion",
-        isBoardMember: false,
-        isItAdmin: false,
-        isProjectManager: false,
-        year: 2
-    },
-    {
-        firstName: "Nala",
-        lastName: "Lion",
-        isBoardMember: false,
-        isItAdmin: false,
-        isProjectManager: false,
-        year: 3
-    },
-    {
-        firstName: "Haleigh",
-        lastName: "Reichert",
-        isBoardMember: true,
-        isItAdmin: false,
-        isProjectManager: false,
-        year: 4
-    },
-    {
-        firstName: "Linwood",
-        lastName: "Stiedemann",
-        isBoardMember: false,
-        isItAdmin: false,
-        isProjectManager: true,
-        year: 2
-    },
-    {
-        firstName: "Jennie",
-        lastName: "Hahn",
-        isBoardMember: false,
-        isItAdmin: false,
-        isProjectManager: false,
-        year: 4
-    }
-];
