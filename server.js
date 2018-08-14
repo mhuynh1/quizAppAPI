@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const dotenv = require('dotenv')
-const bodyParser = require('body-parser');
 const mongo = require('./mongodb');
 
 // initialize development environment things
@@ -30,7 +29,7 @@ app.use(bodyParser.json());
 
 // parse application/x-www-form-urlencoded
 app.use(
-    bodyParser.urlencoded({
+    express.urlencoded({
         extended: true
     }))
 
@@ -39,16 +38,6 @@ const router = require("./routes");
 // register routes
 app.use(router);
 
-// app.get('/api/quizzes', (req, res) => {
-//     res.send('quizzes here')
-// })
-
-
-// app.listen(8080, () => {
-//     console.log('api is LIT on 8080')
-// });
-
-// const mongoUrl = process.env.MONGODB_URL
 const mongoUrl = "mongodb://localhost:27017/quizzes"
 
 // start mongo connection pool, then start express app
