@@ -25,7 +25,7 @@ const port = process.env.PORT || 8080;
 
 // get all data/stuff of the body (POST) parameters
 // parse application/json
-app.use(bodyParser.json());
+app.use(express.json());
 
 // parse application/x-www-form-urlencoded
 app.use(
